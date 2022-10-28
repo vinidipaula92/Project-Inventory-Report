@@ -4,16 +4,16 @@ from inventory_report.inventory.product import Product
 def test_cria_produto():
     produto = Product(
         1,
-        "Coca-Cola",
-        "Coca-Cola Company",
-        "2021-01-01",
-        "2021-12-31",
-        "123456789",
-        "em local fresco e seco",
+        "CADEIRA",
+        "Forces of Nature",
+        "2022-04-04",
+        "2023-02-09",
+        "FR48",
+        "Conservar em local fresco",
     )
-    assert produto.nome_da_empresa == "Coca-Cola Company"
-    assert produto.nome_do_produto == "Coca-Cola"
-    assert produto.data_de_fabricacao == "2021-01-01"
-    assert produto.data_de_validade == "2021-12-31"
-    assert produto.numero_de_serie == "123456789"
-    assert produto.instrucoes_de_armazenamento == "em local fresco e seco"
+    assert produto.nome_da_empresa == "Forces of Nature"
+    assert produto.nome_do_produto == "CADEIRA"
+    assert produto.data_de_fabricacao == "2022-04-04"
+    assert produto.data_de_validade == "2023-02-09"
+    assert produto.numero_de_serie == "FR48"
+    assert produto.instrucoes_de_armazenamento == "Conservar em local fresco"
