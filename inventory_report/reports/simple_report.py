@@ -33,11 +33,16 @@ class SimpleReport:
         )
 
     @classmethod
-    def get_company_more_products(cls, inventory):
+    def get_count_products_company(cls, inventory):
         companies = {}
         for product in inventory:
             if product["nome_da_empresa"] in companies:
                 companies[product["nome_da_empresa"]] += 1
             else:
                 companies[product["nome_da_empresa"]] = 1
+        return companies
+
+    @classmethod
+    def get_company_more_products(cls, inventory):
+        companies = cls.get_count_products_company(inventory)
         return max(companies, key=companies.get)
